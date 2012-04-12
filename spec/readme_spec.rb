@@ -42,6 +42,10 @@ describe SimplyConfigurable do
       subject.config['color'].should == 'green'
     end
 
+    it 'should allow nested hash values' do
+      lambda { subject.config :test => {} }.should_not raise_error
+    end
+
   end
 
   context 'a Foo instance' do

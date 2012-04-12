@@ -1,4 +1,4 @@
-require 'active_support/hash_with_indifferent_access'
+require 'active_support/core_ext/hash'
 
 module SimplyConfigurable
 
@@ -15,7 +15,7 @@ module SimplyConfigurable
   module ClassMethods
 
     def config(options = {})
-      @config ||= HashWithIndifferentAccess.new({})
+      @config ||= {}.with_indifferent_access
 
       if options
         @config.merge!(options || {})
