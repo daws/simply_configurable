@@ -4,6 +4,8 @@ Makes it simple to set arbitrary config key/value pairs on a class.
 
 == Synopsis:
 
+ require 'simply_configurable'
+
  class Foo
 
    include SimplyConfigurable
