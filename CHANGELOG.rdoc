@@ -1,7 +1,10 @@
 = Simply Configurable
 
+== Version 0.1.0
+* Added capability to nest SimplyConfigurable classes (see README)
+
 == Version 0.0.2
-* Allowing nested hash values (before, "MyClass.config :foo => {}" threw an error)
+* Allows nested hash values (before, "MyClass.config :foo => {}" threw an error)
 
 == Version 0.0.1
 * Initial release
