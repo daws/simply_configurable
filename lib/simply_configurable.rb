@@ -21,7 +21,17 @@ module SimplyConfigurable
         @config.merge!(options || {})
       end
 
-      @config
+      superclass_config.merge(@config)
+    end
+
+    private
+
+    def superclass_config
+      if self.superclass.include?(SimplyConfigurable)
+        self.superclass.config
+      else
+        {}.with_indifferent_access
+      end
     end
 
   end

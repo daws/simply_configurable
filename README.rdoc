@@ -43,3 +43,24 @@ The #config method is defined on both the class and its instances, so it may be 
 
 This library uses the HashWithIndifferentAccess class of the ActiveSupport library, allowing you to access/set config values by either symbol or string.
 
+== Nesting
+
+Any subclasses of a SimplyConfigurable class will also be SimplyConfigurable. The subclass will inherit all config values from its ancestors, but any values set on the subclass will not overwrite those on the ancestors.
+
+For example:
+
+ class Foo
+   include SimplyConfigurable
+
+   config :color => 'red'
+   config :style => 'awesome'
+ end
+
+ class Bar < Foo
+   config :style => 'less awesome'
+ end
+
+ Foo.config[:style]  # returns 'awesome'
+ Bar.config[:style]  # returns 'less awesome'
+ Bar.config[:color]  # returns 'red'
+
