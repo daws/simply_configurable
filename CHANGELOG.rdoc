@@ -1,5 +1,8 @@
 = Simply Configurable
 
+== Version 0.0.2
+* Allowing nested hash values (before, "MyClass.config :foo => {}" threw an error)
+
 == Version 0.0.1
 * Initial release
 * Supports indifferent access of config values (string or symbol)
