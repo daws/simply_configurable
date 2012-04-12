@@ -35,3 +35,11 @@ Makes it simple to set arbitrary config key/value pairs on a class.
  Foo.config :color => 'green'
  Foo.config['color']  # returns 'green'
 
+== Class and Instance Access
+
+The #config method is defined on both the class and its instances, so it may be simply called from either context.
+
+== Hash Access
+
+This library uses the HashWithIndifferentAccess class of the ActiveSupport library, allowing you to access/set config values by either symbol or string.
+
