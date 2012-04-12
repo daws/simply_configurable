@@ -19,7 +19,7 @@ Makes it simple to set arbitrary config key/value pairs on a class.
 
    class << self
      def color
-       puts "my color is #{config[:color]}"
+       puts "my color is #{config['color']}"
      end
    end
 
@@ -29,9 +29,9 @@ Makes it simple to set arbitrary config key/value pairs on a class.
  foo = Foo.new
  foo.style  # prints 'my style is awesome'
 
- Foo.config  # returns { :color => 'red', :style => 'awesome' }
+ Foo.config  # returns { 'color' => 'red', 'style' => 'awesome' }
  Foo.config[:color]  # returns 'red'
 
  Foo.config :color => 'green'
- Foo.config[:color]  # returns 'green'
+ Foo.config['color']  # returns 'green'
 
