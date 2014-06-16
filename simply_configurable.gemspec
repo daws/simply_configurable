@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.files = Dir[ 'lib/**/*.rb', 'README.rdoc', 'CHANGELOG.rdoc', 'LICENSE.txt' ]
 
   # dependencies
-  s.add_dependency 'activesupport', '~> 3.0'
+  s.add_dependency 'activesupport', '>= 3.0'
 
   # if binaries
   # s.bindir = 'bin'

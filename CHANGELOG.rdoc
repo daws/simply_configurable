@@ -1,5 +1,8 @@
 = Simply Configurable
 
+== Version 0.2.1
+* Loosened activesupport version requirement
+
 == Version 0.2.0
 * Added ability for modules (not just classes) to be SimplyConfigurable
 
